@@ -1,142 +1,343 @@
 @import "tailwindcss";
 
-.primary{
-    color: #FF752A;
+*{
+    font-family: "Plus Jakarta Sans", serif;
+}
+.primary {
+  color: #ff752a;
 }
 
-.bg-primary{
-    background-color: #FF752A;
+.bg-primary {
+  background-color: #ff752a;
 }
 
-.overlay{
-    backdrop-filter: blur(5px);
-    background-color: rgba(33, 31, 48, 0.85);
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
+.overlay {
+  backdrop-filter: blur(5px);
+  background-color: rgba(33, 31, 48, 0.85);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
-.hero{
-    background: linear-gradient(180deg, #ffffff 0%, rgb(234, 232, 255) 100%);
+.hero {
+  background: linear-gradient(180deg, #ffffff 0%, rgb(234, 232, 255) 100%);
 }
 
 .company-slider {
-    margin: 10px auto;
-    width: 60%; /* Full viewport width */
-    overflow: hidden; /* Hide the overflowing content */
-    white-space: nowrap; /* Prevent line breaks */
-    position: relative; 
+  margin: 10px auto;
+  width: 60%; /* Full viewport width */
+  overflow: hidden; /* Hide the overflowing content */
+  white-space: nowrap; /* Prevent line breaks */
+  position: relative;
+}
+
+.slider-content {
+  width: 100%;
+  display: inline-block;
+  animation: scroll 20s linear infinite; /* Scroll horizontally infinitely */
+}
+
+.slider-content img {
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.fade {
+  position: absolute;
+  bottom: 0;
+  width: 100px; /* Width of the fade */
+  height: 100px;
+  pointer-events: none;
+}
+
+.fade-left {
+  left: 0;
+  z-index: 10;
+  background: linear-gradient(
+    to right,
+    rgba(234, 232, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.fade-right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(234, 232, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+@media (max-width: 1023px) {
+  .review-slider {
+    width: 95%;
+    margin: 30px auto;
   }
-  
+
+  /* Ensure container has correct width on mobile */
+  .testimonial-container {
+    width: calc(300px * 6); /* Adjust this to the number of testimonials */
+    animation: scrollMobile 40s linear infinite;
+  }
+  .faq-item {
+    padding: 0 10px;
+  }
+  .cross {
+    min-width: 20px;
+    min-height: 20px;
+  }
   .slider-content {
     width: 100%;
     display: inline-block;
-    animation: scroll 20s linear infinite; /* Scroll horizontally infinitely */
+    animation: scroll 5s linear infinite; /* Scroll horizontally infinitely */
   }
-  
-  .slider-content img {
-    display: inline-block;
-    margin-right: 10px;
-    border-radius: 5px;
-    width: 150px;
+}
+
+/* Keyframes for the desktop scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
   }
-  
-  .fade {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Keyframes for mobile scroll animation */
+@keyframes scrollMobile {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(
+      calc(-300px * 6)
+    ); /* Adjust based on the number of testimonials */
+  }
+}
+
+#toggle-orange.active {
+  background-color: #ff752a;
+  color: white;
+}
+#toggle-orange.active svg {
+  fill: white;
+}
+#toggle-orange.active span {
+  color: white;
+}
+
+#toggle-blue.active {
+  background-color: #6552ff;
+  color: white;
+}
+
+#toggle-blue.active svg {
+  fill: white;
+}
+
+#toggle-blue.active span {
+  color: white;
+}
+
+.framer-1toqve3 {
+  bottom: -195px;
+  flex: none;
+  height: 506px;
+  left: calc(50.00000000000002% - 506px / 2);
+  opacity: 0.5;
+  overflow: visible;
+  position: absolute;
+  width: 506px;
+  z-index: 1;
+}
+
+ .framer-1o0xw4k {
+  aspect-ratio: 1 / 1;
+  background-color: rgb(255, 117, 42)   ;
+  border-radius: 10000px;
+  flex: none;
+  height: var(auto, 500px);
+  left: 50%;
+  opacity: 0.1;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  will-change: var(none, transform);
+}
+
+.framer-muzk19 {
+  aspect-ratio: 1 / 1;
+  background-color:rgb(255, 117, 42);
+  border-radius: 10000px;
+  flex: none;
+  height: var(auto, 400px);
+  left: 50%;
+  opacity: 0.1;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  will-change: var(none, transform);
+}
+
+.framer-1essjsh {
+  aspect-ratio: 1 / 1;
+  background-color: rgb(255, 117, 42);
+  border-radius: 10000px;
+  flex: none;
+  height: var(auto, 300px);
+  left: 50%;
+  opacity: 0.1;
+  overflow: hidden;
+  position: absolute;
+  top: 51%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  will-change: var(none, transform);
+}
+
+.framer-1kgavtb {
+    flex: none;
+    height: 560px;
+    opacity: .5;
+    overflow: visible;
     position: absolute;
-    bottom: 0;
-    width: 100px; /* Width of the fade */
-    height: 100px;
-    pointer-events: none;
-  }
-  
-  .fade-left {
+    right: -221px;
+    top: -210px;
+    width: 560px;
+    z-index: 1;
+}
+
+.framer-1ou5oqo {
+    aspect-ratio: 1 / 1;
+    background-color: var(--token-5333d6f3-310f-4a70-8d78-a8a05431c2e6, #6552ff);
+    border-radius: 10000px;
+    flex: none;
+    height: var(--framer-aspect-ratio-supported, 560px);
     left: 0;
-    z-index: 10;
-    background: linear-gradient(
-      to right,
-      rgba(234, 232, 255, 1),
-      rgba(255, 255, 255, 0)
-    );
-  }
-  
-  .fade-right {
+    opacity: .1;
+    overflow: hidden;
+    position: absolute;
     right: 0;
-    background: linear-gradient(
-      to left,
-      rgba(234, 232, 255, 1),
-      rgba(255, 255, 255, 0)
-    );
-  }
-  
+    top: 0;
+    will-change: var(--framer-will-change-override, transform);
+}
 
-@media (max-width: 1023px) {
-    .review-slider {
-      width: 95%;
-      margin: 30px auto;
-    }
-  
-    /* Ensure container has correct width on mobile */
-    .testimonial-container {
-      width: calc(300px * 6); /* Adjust this to the number of testimonials */
-      animation: scrollMobile 40s linear infinite;
-    }
-    .faq-item{
-      padding: 0 10px;
-    }
-    .cross{
-      min-width: 20px;
-      min-height: 20px;
-    }
-    .slider-content {
-        width: 100%;
-        display: inline-block;
-        animation: scroll 5s linear infinite; /* Scroll horizontally infinitely */
-      }
-      
-  }
-  
-  /* Keyframes for the desktop scroll animation */
-  @keyframes scroll {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  /* Keyframes for mobile scroll animation */
-  @keyframes scrollMobile {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(calc(-300px * 6)); /* Adjust based on the number of testimonials */
-    }
-  }
+.framer-1xfe66z {
+    aspect-ratio: 1 / 1;
+    background-color: var(--token-5333d6f3-310f-4a70-8d78-a8a05431c2e6, #6552ff);
+    border-radius: 10000px;
+    flex: none;
+    height: var(--framer-aspect-ratio-supported, 448px);
+    left: 50%;
+    opacity: .1;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 448px;
+    will-change: var(--framer-will-change-override, transform);
+}
 
-  #toggle-orange.active{
-    background-color: #FF752A;
-    color: white;
-  }
-  #toggle-orange.active svg{
-    fill: white;
-  }
-  #toggle-orange.active span{
-    color: white;
-  }
+.framer-1oika4u {
+    aspect-ratio: 1 / 1;
+    background-color: var(--token-5333d6f3-310f-4a70-8d78-a8a05431c2e6, #6552ff);
+    border-radius: 10000px;
+    flex: none;
+    height: var(--framer-aspect-ratio-supported, 336px);
+    left: 50%;
+    opacity: .1;
+    overflow: hidden;
+    position: absolute;
+    top: 51%;
+    transform: translate(-50%, -50%);
+    width: 336px;
+    will-change: var(--framer-will-change-override, transform);
+}
 
-  #toggle-blue.active{
-    background-color: #6552FF;
-    color: white;
-  }
+.framer-225izu {
+    flex: 1 0 0px;
+    height: 1px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    will-change: var(--framer-will-change-override, transform);
+    z-index: 2;
+}
 
-  #toggle-blue.active svg{
-    fill:white;
-  }
+.framer-ub77my-container {
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-30%);
+    position: relative;
+    width: 100%;
+}
 
-  #toggle-blue.active span{
-    color:white;
-  }
+.framer-17b2ynk {
+    -webkit-mask: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 79%) add;
+    bottom: -108px;
+    flex: none;
+    height: 791px;
+    left: calc(50.00000000000002% - 1022px / 2);
+    mask: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 79%) add;
+    opacity: .6;
+    overflow: visible;
+    position: absolute;
+    width: 1022px;
+    z-index: 0;
+}
+
+.framer-16v35ko {
+    aspect-ratio: 1 / 1;
+    background-color: var(--token-5333d6f3-310f-4a70-8d78-a8a05431c2e6, #6552ff);
+    border-radius: 10000px;
+    bottom: -231px;
+    flex: none;
+    height: var(--framer-aspect-ratio-supported, 1022px);
+    left: 0;
+    opacity: .1;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    will-change: var(--framer-will-change-override, transform);
+}
+
+.framer-1y8tndy {
+    aspect-ratio: 1 / 1;
+    background-color: var(--token-5333d6f3-310f-4a70-8d78-a8a05431c2e6, #6552ff);
+    border-radius: 10000px;
+    bottom: -129px;
+    flex: none;
+    height: var(--framer-aspect-ratio-supported, 818px);
+    left: 50%;
+    opacity: .1;
+    overflow: hidden;
+    position: absolute;
+    transform: translate(-50%);
+    width: 818px;
+    will-change: var(--framer-will-change-override, transform);
+}
+
+.framer-s0l5a3 {
+    aspect-ratio: 1 / 1;
+    background-color: var(--token-5333d6f3-310f-4a70-8d78-a8a05431c2e6, #6552ff);
+    border-radius: 10000px;
+    bottom: -41px;
+    flex: none;
+    height: var(--framer-aspect-ratio-supported, 613px);
+    left: 50%;
+    opacity: .1;
+    overflow: hidden;
+    position: absolute;
+    transform: translate(-50%);
+    width: 613px;
+    will-change: var(--framer-will-change-override, transform);
+}
