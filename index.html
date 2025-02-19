@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <!-- <header class="bg-primary flex justify-between px-[5%] py-3">
+      <div class="logo">
+        <svg
+          style="width: 100%; height: 100%"
+          viewBox="0 0 155 40"
+          preserveAspectRatio="none"
+          width="100%"
+          height="100%"
+        >
+          <use href="#svg-1195316793_13671"></use>
+        </svg>
+      </div>
+      <div>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/Customers.html">Customers</a>
+      </div>
+      <div>
+        <a href="#login">Login</a>
+        <a href="#login">Talk with Sales</a>
+      </div>
+    </header> -->
+    <header class="bg-white sticky top-0 z-[1000]">
+      <nav
+        class="mx-auto flex items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img
+              class="h-8 w-auto"
+              src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="flex lg:hidden" id="">
+          <button
+            id="menuOpener"
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="size-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+          <button
+            id="menuCloser"
+            type="button"
+            class="-m-2.5 rounded-md p-2.5 text-gray-700 hidden"
+          >
+            <span class="sr-only">Close menu</span>
+            <svg
+              class="size-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="./pricing.html"
+            class="text-sm/6 font-medium text-gray-900 duration-300 hover:text-[#FF752A]"
+            >Pricing</a
+          >
+          <a
+            href="./customers.html"
+            class="text-sm/6 font-medium text-gray-900 duration-300 hover:text-[#FF752A]"
+            >Customers</a
+          >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-5">
+          <a href="#" class="font-medium text-gray-900 opacity-70">Log in </a>
+          <a
+            href="#"
+            class="font-medium bg-[#FF752A] rounded-xl px-4 py-2 opacity-95 duration-300 hover:opacity-100 text-white"
+            >Talk with Sales
+          </a>
+        </div>
+      </nav>
+
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div
+        id="mobileMenu"
+        class="lg:hidden hidden bg-white shadow"
+        role="dialog"
+        aria-modal="true"
+      >
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 h-[250px] shadow-2xl rounded-b-2xl"
+        >
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img
+                class="h-8 w-auto"
+                src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                alt=""
+              />
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="size-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6 flex flex-col">
+                <a
+                  href="./pricing.html"
+                  class="text-sm/6 font-medium text-gray-900 duration-300 hover:text-[#FF752A]"
+                  >Pricing</a
+                >
+                <a
+                  href="./customers.html"
+                  class="text-sm/6 font-medium text-gray-900 duration-300 hover:text-[#FF752A]"
+                  >Customers</a
+                >
+              </div>
+              <div class="py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >Log in</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1500px] mx-auto">
+        <!-- Hero -->
+      <section class="hero mt-5 lg:mt-20 px-5">
+        <div
+          class="flex items-center justify-center h-full w-full flex-col gap-5"
+        >
+          <h1 class="text-4xl lg:text-8xl font-semibold text-center">
+            <span class="primary">Human</span> +
+            <span class="primary">AI</span> <br />
+            Live Website <br />
+            Conversations
+          </h1>
+          <p class="text-gray-500 text-base lg:text-xl text-center">
+            Convert more of your traffic <br />
+            into pipeline with AI. A lot more.
+          </p>
+          <div>
+            <a
+              href="#"
+              class="font-medium bg-[#FF752A] rounded-xl px-4 py-2 opacity-95 duration-300 hover:opacity-100 text-white border border-zinc-300"
+              >Try it live
+            </a>
+            <a
+              href="#"
+              class="font-medium bg-white rounded-xl px-4 py-2 opacity-95 duration-300 hover:opacity-100 text-black border border-zinc-300 hover:text-[#FF752A] ml-5"
+              >Book a meeting
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="lg:max-w-5xl mx-auto mt-20 relative rounded-2xl overflow-hidden"
+        >
+          <img
+            src="https://framerusercontent.com/images/B0AQ0W6TUXyMrCekrJN1tnn159U.png?scale-down-to=2048&lossless=1"
+            class=""
+            alt=""
+          />
+          <img
+            src="https://framerusercontent.com/images/ZE49VY7BZFBHvRSOI2LWaawtDE.png?scale-down-to=2048"
+            class="absolute top-1/2 left-1/2 z-2 max-w-[120px] lg:max-w-[200px] -translate-x-1/2 -translate-y-1/2"
+            alt=""
+          />
+          <div
+            class="absolute top-1/2 left-1/2 z-5 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px]"
+          >
+            <div
+              class="absolute hidden md:flex top-5 right-0 items-center gap-3 bg-white rounded-r-2xl rounded-tl-xl rounded-bl-none px-3 py-1"
+            >
+              <div class="bg-purple-600 px-[6px] py-[2px] rounded-md">
+                <svg
+                  class="max-w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-d624bab6-2e79-4b2b-942d-b7a193232c83, rgb(255, 255, 255))"
+                  style="
+                    user-select: none;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    fill: var(
+                      --token-d624bab6-2e79-4b2b-942d-b7a193232c83,
+                      rgb(255, 255, 255)
+                    );
+                    color: var(
+                      --token-d624bab6-2e79-4b2b-942d-b7a193232c83,
+                      rgb(255, 255, 255)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-d624bab6-2e79-4b2b-942d-b7a193232c83, rgb(255, 255, 255))"
+                    weight="duotone"
+                  >
+                    <path
+                      d="M136,108A52,52,0,1,1,84,56,52,52,0,0,1,136,108Z"
+                      opacity="0.2"
+                    ></path>
+                    <path
+                      d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <p class="text-xs">AI Avatar of your team</p>
+            </div>
+
+            <div
+              class="absolute top-32 right-10 hidden md:flex items-center gap-3 bg-white rounded-r-2xl rounded-tl-xl rounded-bl-none px-3 py-1"
+            >
+              <div class="bg-[#29AD2E] px-[6px] py-[2px] rounded-md">
+                <svg
+                  class="max-w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-d624bab6-2e79-4b2b-942d-b7a193232c83, rgb(255, 255, 255))"
+                  style="
+                    user-select: none;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    fill: var(
+                      --token-d624bab6-2e79-4b2b-942d-b7a193232c83,
+                      rgb(255, 255, 255)
+                    );
+                    color: var(
+                      --token-d624bab6-2e79-4b2b-942d-b7a193232c83,
+                      rgb(255, 255, 255)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-d624bab6-2e79-4b2b-942d-b7a193232c83, rgb(255, 255, 255))"
+                    weight="duotone"
+                  >
+                    <path
+                      d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z"
+                      opacity="0.2"
+                    ></path>
+                    <path
+                      d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-96-88v64a8,8,0,0,1-16,0V132.94l-4.42,2.22a8,8,0,0,1-7.16-14.32l16-8A8,8,0,0,1,112,120Zm59.16,30.45L152,176h16a8,8,0,0,1,0,16H136a8,8,0,0,1-6.4-12.8l28.78-38.37A8,8,0,1,0,145.07,132a8,8,0,1,1-13.85-8A24,24,0,0,1,176,136,23.76,23.76,0,0,1,171.16,150.45Z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <p class="text-xs">24/7 Availability</p>
+            </div>
+
+            <div
+              class="absolute top-20 left-0 hidden md:flex items-center gap-3 bg-white rounded-l-2xl rounded-tr-xl rounded-br-none px-3 py-1"
+            >
+              <div class="bg-[#FF752A] px-[6px] py-[2px] rounded-md">
+                <svg
+                  class="max-w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-d624bab6-2e79-4b2b-942d-b7a193232c83, rgb(255, 255, 255))"
+                  style="
+                    user-select: none;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    fill: var(
+                      --token-d624bab6-2e79-4b2b-942d-b7a193232c83,
+                      rgb(255, 255, 255)
+                    );
+                    color: var(
+                      --token-d624bab6-2e79-4b2b-942d-b7a193232c83,
+                      rgb(255, 255, 255)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-d624bab6-2e79-4b2b-942d-b7a193232c83, rgb(255, 255, 255))"
+                    weight="duotone"
+                  >
+                    <path
+                      d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z"
+                      opacity="0.2"
+                    ></path>
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <p class="text-xs">Dedicated AI Sales Rep</p>
+            </div>
+            <div
+              class="absolute top-42 left-10 hidden md:flex items-center gap-3 bg-white rounded-l-2xl rounded-tr-xl rounded-br-none px-3 py-1"
+            >
+              <div class="bg-[#51BDFF] px-[6px] py-[2px] rounded-md">
+                <svg
+                  class="max-w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-d624bab6-2e79-4b2b-942d-b7a193232c83, rgb(255, 255, 255))"
+                  style="
+                    user-select: none;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    fill: var(
+                      --token-d624bab6-2e79-4b2b-942d-b7a193232c83,
+                      rgb(255, 255, 255)
+                    );
+                    color: var(
+                      --token-d624bab6-2e79-4b2b-942d-b7a193232c83,
+                      rgb(255, 255, 255)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-d624bab6-2e79-4b2b-942d-b7a193232c83, rgb(255, 255, 255))"
+                    weight="duotone"
+                  >
+                    <path
+                      d="M200,72V184a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V72a8,8,0,0,1,8-8H192A8,8,0,0,1,200,72Z"
+                      opacity="0.2"
+                    ></path>
+                    <path
+                      d="M251.77,73a8,8,0,0,0-8.21.39L208,97.05V72a16,16,0,0,0-16-16H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V159l35.56,23.71A8,8,0,0,0,248,184a8,8,0,0,0,8-8V80A8,8,0,0,0,251.77,73ZM192,184H32V72H192V184Zm48-22.95-32-21.33V116.28L240,95Z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <p class="text-xs">Audio and Video</p>
+            </div>
+          </div>
+          <div class="overlay"></div>
+        </div>
+
+        <div class="company-slider">
+          <div 
+            class="text-center mb-5 text-lg font-medium mt-10 text-wrap"
+          >
+          Trusted by
+          </div>
+          <div class="fade fade-left"></div>
+          <!-- Left fade effect -->
+          <div class="slider-content relative">
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+            <img src="https://framerusercontent.com/images/g6J1k1jxN00nM9mcO3LI5ZYVk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ku6CHo5tuuciGgATwe8FLIIfjks.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/eh4AZL9ZT9fLXsSbpIpHUKYXCS8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/vQuuff5DUIkk1KMOakCL4qCXvc.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/g1Wen4PWD1x1L67a0YxbjegUzcY.png" alt="" />
+            <img src="https://framerusercontent.com/images/21PqB6OAfcdrheKHH9cI3xBaWA.png" alt="" />
+            <img src="https://framerusercontent.com/images/OXZpSRjOZGNiTdSIqyPyQY0ZO8.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/1Xa3Csqujb2Qz4fmSc8B18SEzk.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/8lJHhVGpeMRwY0xRp03lUndA0.png?scale-down-to=512" alt="" />
+            <img src="https://framerusercontent.com/images/ELURKJhH8s6sTLD15RzQwuXMIc.png" alt="" />
+          </div>
+          <div class="fade fade-right"></div>
+          <!-- Right fade effect -->
+        </div>
+      </section>
+
+      <section class="px-5 lg:px-[10%] flex flex-col justify-center py-10 gap-10">
+        <div class="flex flex-col  items-center gap-7">
+            <div class="bg-[#FFF1EB] px-3 py-1 rounded-full">
+                <span class="text-[#FF752A]">
+                    Create Pipeline with AI
+                </span>
+            </div>
+            <h2 class="text-4xl lg:text-5xl text-center font-semibold">
+                AI that connects <br> your team to buyers.
+            </h2>
+            <p class="text-zinc-400 lg:text-lg text-center lg:text-start">
+                Human + AI Live Chat that engages visitors, alerts reps, and books meetings for your team. <br> Detect target accounts and nurture your ideal customer profile visitors through your website.
+            </p>
+        </div>
+
+        <div class="relative">
+            <div class="bg-[#F5F5FA] flex rounded-2xl px-3 lg:px-6 py-2 lg:py-4 gap-5">
+                <button id="toggle-orange" class="toggle-btns py-3 lg:py-6 rounded-2xl w-1/2 flex flex-col lg:flex-row items-center justify-center lg:gap-3 ">
+                    <svg class="max-w-7 fill-[#FF752A]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="var(--token-d624bab6-2e79-4b2b-942d-b7a193232c83, rgb(255, 255, 255))"><g color="var(--token-d624bab6-2e79-4b2b-942d-b7a193232c83, rgb(255, 255, 255))" weight="duotone"><path d="M224,128a95.76,95.76,0,0,1-31.8,71.37A72,72,0,0,0,128,160a40,40,0,1,0-40-40,40,40,0,0,0,40,40,72,72,0,0,0-64.2,39.37h0A96,96,0,1,1,224,128Z" opacity="0.2"></path><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM74.08,197.5a64,64,0,0,1,107.84,0,87.83,87.83,0,0,1-107.84,0ZM96,120a32,32,0,1,1,32,32A32,32,0,0,1,96,120Zm97.76,66.41a79.66,79.66,0,0,0-36.06-28.75,48,48,0,1,0-59.4,0,79.66,79.66,0,0,0-36.06,28.75,88,88,0,1,1,131.52,0Z"></path></g></svg>
+                    <span class="text-black text-lg">
+                        Human Live Chat
+                    </span>
+                </button>
+                <button id="toggle-blue" class="toggle-btns flex flex-col lg:flex-row items-center justify-center py-3 lg:py-6 rounded-2xl w-1/2 lg:gap-3">
+                    <svg class="max-w-7 fill-[#6552FF]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="var(--token-5333d6f3-310f-4a70-8d78-a8a05431c2e6, rgb(101, 82, 255))" ><g color="var(--token-5333d6f3-310f-4a70-8d78-a8a05431c2e6, rgb(101, 82, 255))" weight="duotone"><path d="M224,124h0a92,92,0,0,1-92,92H48a8,8,0,0,1-8-8V124a92,92,0,0,1,92-92h0A92,92,0,0,1,224,124Z" opacity="0.2"></path><path d="M132,24A100.11,100.11,0,0,0,32,124v84a16,16,0,0,0,16,16h84a100,100,0,0,0,0-200Zm0,184H48V124a84,84,0,1,1,84,84Zm12-80a12,12,0,1,1-12-12A12,12,0,0,1,144,128Zm-44,0a12,12,0,1,1-12-12A12,12,0,0,1,100,128Zm88,0a12,12,0,1,1-12-12A12,12,0,0,1,188,128Z"></path></g></svg>
+                    <span class="text-black text-lg">AI Live Chat</span>
+                </button>
+            </div>
+            <div class="toggle-container relative mt-10">
+            <div id="orange-div" class="bg-[#FF752A] absolute top-0 w-full p-5 rounded-2xl flex flex-col lg:flex-row gap-10 items-center">
+                <div class="bg-white w-full lg:w-1/2 place-items-center rounded-2xl">
+                    <img src="https://framerusercontent.com/images/pwwWBhf6wdaDJZIZLmwon7VXCFk.png?lossless=1" class="max-w-[300px] lg:max-w-[500px]" alt="">
+                </div>
+                <div class="text-white p-5 flex flex-col gap-5 items-start">
+                    <h3 class="text-3xl font-semibold">Human Live Chat
+                    </h3>
+                    <p>
+                        Connect with buyers on your website <br> through compelling video conversations.
+                    </p>
+                    <ul class="flex flex-col gap-4">
+                        <li>
+                            <svg class="max-w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(255, 255, 255)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"><g color="rgb(255, 255, 255)" weight="duotone"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></g></svg>
+                            Engage live with text, audio, or video chat, anywhere in the world
+                        </li>
+                        <li>
+                            <svg class="max-w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(255, 255, 255)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"><g color="rgb(255, 255, 255)" weight="duotone"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></g></svg>
+                            Detect companies who visit your site to track and <br> route them effectively, and schedule time to meet
+                        </li>
+                        <li>
+                            <svg class="max-w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(255, 255, 255)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"><g color="rgb(255, 255, 255)" weight="duotone"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></g></svg>
+                            Filter traffic and build dynamic lists of ICP and Target Account visitors
+                        </li>
+                    </ul>
+                    <button class="bg-white rounded-xl py-2 px-7">
+                        <a href="" class="text-black hover:text-orange-400 duration-200">Learn More</a>
+                    </button>
+                </div>
+            </div>
+            <div id="blue-div" class="bg-[#6552FF] absolute top-0 w-full p-5 rounded-2xl flex flex-col lg:flex-row gap-10 items-center">
+                <div class="bg-white w-full lg:w-1/2 place-items-center rounded-2xl">
+                    <img src="https://framerusercontent.com/images/uC4YFH9PjlvPhjTsyimVFzmvA.png?scale-down-to=1024&lossless=1" class="max-w-[300px] lg:max-w-[500px]" alt="">
+                </div>
+                <div class="text-white p-5 flex flex-col gap-5 items-start">
+                    <h3 class="text-3xl font-semibold">AI Live Chat
+
+                    </h3>
+                    <p>
+                        Engage and qualify every site visitor with personalized text, <br> voice and video AI. Alert human reps for video call handoffs.
+
+
+                    </p>
+                    <ul class="flex flex-col gap-4">
+                        <li>
+                            <svg class="max-w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(255, 255, 255)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"><g color="rgb(255, 255, 255)" weight="duotone"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></g></svg>
+                            Realistic replicas of your reps host live audio and video conversations
+
+                        </li>
+                        <li>
+                            <svg class="max-w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(255, 255, 255)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"><g color="rgb(255, 255, 255)" weight="duotone"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></g></svg>
+                            Compelling messages on a pre-configured <br> LLM trained on your product marketing
+
+                        </li>
+                        <li>
+                            <svg class="max-w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(255, 255, 255)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"><g color="rgb(255, 255, 255)" weight="duotone"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></g></svg>
+                            Alerts human reps and encourage rep <br> takeover for live video calls on qualified visitors
+
+                        </li>
+                    </ul>
+                    <button class="bg-white rounded-xl py-2 px-7">
+                        <a href="" class="text-black hover:text-orange-400 duration-200">Learn More</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

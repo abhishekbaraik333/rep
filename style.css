@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+.primary{
+    color: #FF752A;
+}
+
+.bg-primary{
+    background-color: #FF752A;
+}
+
+.overlay{
+    backdrop-filter: blur(5px);
+    background-color: rgba(33, 31, 48, 0.85);
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.hero{
+    background: linear-gradient(180deg, #ffffff 0%, rgb(234, 232, 255) 100%);
+}
+
+.company-slider {
+    margin: 10px auto;
+    width: 60%; /* Full viewport width */
+    overflow: hidden; /* Hide the overflowing content */
+    white-space: nowrap; /* Prevent line breaks */
+    position: relative; 
+  }
+  
+  .slider-content {
+    width: 100%;
+    display: inline-block;
+    animation: scroll 20s linear infinite; /* Scroll horizontally infinitely */
+  }
+  
+  .slider-content img {
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 5px;
+    width: 150px;
+  }
+  
+  .fade {
+    position: absolute;
+    bottom: 0;
+    width: 100px; /* Width of the fade */
+    height: 100px;
+    pointer-events: none;
+  }
+  
+  .fade-left {
+    left: 0;
+    z-index: 10;
+    background: linear-gradient(
+      to right,
+      rgba(234, 232, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+  }
+  
+  .fade-right {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      rgba(234, 232, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+  }
+  
+
+@media (max-width: 1023px) {
+    .review-slider {
+      width: 95%;
+      margin: 30px auto;
+    }
+  
+    /* Ensure container has correct width on mobile */
+    .testimonial-container {
+      width: calc(300px * 6); /* Adjust this to the number of testimonials */
+      animation: scrollMobile 40s linear infinite;
+    }
+    .faq-item{
+      padding: 0 10px;
+    }
+    .cross{
+      min-width: 20px;
+      min-height: 20px;
+    }
+    .slider-content {
+        width: 100%;
+        display: inline-block;
+        animation: scroll 5s linear infinite; /* Scroll horizontally infinitely */
+      }
+      
+  }
+  
+  /* Keyframes for the desktop scroll animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Keyframes for mobile scroll animation */
+  @keyframes scrollMobile {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(calc(-300px * 6)); /* Adjust based on the number of testimonials */
+    }
+  }
+
+  #toggle-orange.active{
+    background-color: #FF752A;
+    color: white;
+  }
+  #toggle-orange.active svg{
+    fill: white;
+  }
+  #toggle-orange.active span{
+    color: white;
+  }
+
+  #toggle-blue.active{
+    background-color: #6552FF;
+    color: white;
+  }
+
+  #toggle-blue.active svg{
+    fill:white;
+  }
+
+  #toggle-blue.active span{
+    color:white;
+  }
