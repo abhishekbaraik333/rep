@@ -1324,11 +1324,6 @@
       }
     }
   }
-  .sm\:max-w-sm {
-    @media (width >= 40rem) {
-      max-width: var(--container-sm);
-    }
-  }
   .sm\:ring-1 {
     @media (width >= 40rem) {
       --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentColor);
@@ -2051,7 +2046,6 @@
   padding: 10px 10px;
   background-color: white;
   border: 1px solid rgb(225, 224, 224);
-  width: 300px;
   border-radius: 7px;
   height: fit-content;
 }
