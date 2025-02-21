@@ -112,6 +112,9 @@
 }
 
 @media (max-width: 1023px) {
+  .company-slider{
+    width: 100%;
+  }
   
   .faq-item {
     padding: 0 10px;
@@ -124,6 +127,9 @@
     width: 100%;
     display: inline-block;
     animation: scroll 50s linear infinite; /* Scroll horizontally infinitely */
+  }
+  .pricing .company-slider{
+    width: 100%;
   }
 }
 

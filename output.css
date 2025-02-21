@@ -1671,6 +1671,9 @@
   background: linear-gradient( to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) );
 }
 @media (max-width: 1023px) {
+  .company-slider {
+    width: 100%;
+  }
   .faq-item {
     padding: 0 10px;
   }
@@ -1682,6 +1685,9 @@
     width: 100%;
     display: inline-block;
     animation: scroll 50s linear infinite;
+  }
+  .pricing .company-slider {
+    width: 100%;
   }
 }
 @keyframes scroll {
